@@ -13,7 +13,7 @@ Active Directory must be supported by DNS to function properly, and Microsoft re
 ```hcl
 module "virtual-machine" {
   source  = "kumarvna/active-directory-forest/azurerm"
-  version = "1.0.0"
+  version = "2.0.0"
 
   # Resource Group, location, VNet and Subnet details
   resource_group_name  = "rg-hub-demo-internal-shared-westeurope-001"
@@ -152,7 +152,7 @@ In the Source and Destination columns, `VirtualNetwork`, `AzureLoadBalancer`, an
 ```hcl
 module "vnet-hub" {
   source  = "kumarvna/active-directory-forest/azurerm"
-  version = "1.0.0"
+  version = "2.0.0"
 
   # .... omitted
   
@@ -212,7 +212,7 @@ End Date of the Project|Date when this application, workload, or service is plan
 ```hcl
 module "vnet-hub" {
   source  = "kumarvna/active-directory-forest/azurerm"
-  version = "1.0.0"
+  version = "2.0.0"
 
   # Resource Group, location, VNet and Subnet details
   resource_group_name  = "rg-hub-demo-internal-shared-westeurope-001"
@@ -228,6 +228,20 @@ module "vnet-hub" {
   }
 }
 ```
+
+## Requirements
+
+Name | Version
+-----|--------
+terraform | >= 0.13
+azurerm | ~> 2.27.0
+
+## Providers
+
+| Name | Version |
+|------|---------|
+azurerm | ~> 2.27.0
+random | n/a
 
 ## Inputs
 
