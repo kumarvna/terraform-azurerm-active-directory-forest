@@ -13,7 +13,7 @@ Active Directory must be supported by DNS to function properly, and Microsoft re
 ```hcl
 module "virtual-machine" {
   source  = "kumarvna/active-directory-forest/azurerm"
-  version = "2.0.0"
+  version = "2.1.0"
 
   # Resource Group, location, VNet and Subnet details
   resource_group_name  = "rg-hub-demo-internal-shared-westeurope-001"
@@ -152,7 +152,7 @@ In the Source and Destination columns, `VirtualNetwork`, `AzureLoadBalancer`, an
 ```hcl
 module "vnet-hub" {
   source  = "kumarvna/active-directory-forest/azurerm"
-  version = "2.0.0"
+  version = "2.1.0"
 
   # .... omitted
   
@@ -212,7 +212,7 @@ End Date of the Project|Date when this application, workload, or service is plan
 ```hcl
 module "vnet-hub" {
   source  = "kumarvna/active-directory-forest/azurerm"
-  version = "2.0.0"
+  version = "2.1.0"
 
   # Resource Group, location, VNet and Subnet details
   resource_group_name  = "rg-hub-demo-internal-shared-westeurope-001"
@@ -234,14 +234,14 @@ module "vnet-hub" {
 Name | Version
 -----|--------
 terraform | >= 0.13
-azurerm | ~> 2.27.0
+azurerm | >= 2.59.0
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-azurerm | ~> 2.27.0
-random | n/a
+azurerm | >= 2.59.0
+random | >= 3.1.0
 
 ## Inputs
 
@@ -261,6 +261,8 @@ Name | Description | Type | Default
 `private_ip_address`|The Static IP Address which should be used. This is valid only when `private_ip_address_allocation` is set to `Static`.|string|`null`
 `dns_servers`|List of dns servers to use for network interface|string|`[]`
 `enable_vm_availability_set`|Manages an Availability Set for Virtual Machines.|string|`false`
+`platform_update_domain_count`|Specifies the number of update domains that are used|string|`5`
+`platform_fault_domain_count`|Specifies the number of fault domains that are used|string|`3`
 `enable_public_ip_address`|Reference to a Public IP Address to associate with the NIC|string|`false`
 `source_image_id`|The ID of an Image which each Virtual Machine should be based on|string|`null`
 `windows_distribution_list`|Pre-defined Azure Windows VM images list|map(object)|`"windows2019dc"`

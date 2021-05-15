@@ -1,12 +1,12 @@
 module "virtual-machine" {
   source  = "kumarvna/active-directory-forest/azurerm"
-  version = "2.0.0"
+  version = "2.1.0"
 
   # Resource Group, location, VNet and Subnet details
-  resource_group_name  = "rg-hub-demo-internal-shared-westeurope-001"
+  resource_group_name  = "rg-shared-westeurope-01"
   location             = "westeurope"
-  virtual_network_name = "vnet-default-hub-westeurope"
-  subnet_name          = "snet-management-default-hub-westeurope"
+  virtual_network_name = "vnet-shared-hub-westeurope-001"
+  subnet_name          = "snet-appgateway"
 
   # This module support multiple Pre-Defined Linux and Windows Distributions.
   # Windows Images: windows2012r2dc, windows2016dc, windows2019dc
@@ -16,7 +16,7 @@ module "virtual-machine" {
   admin_username                     = "batman"
   admin_password                     = "P@$$w0rd1234!"
   private_ip_address_allocation_type = "Static"
-  private_ip_address                 = ["10.1.2.4"]
+  private_ip_address                 = ["10.1.3.4"]
 
   # Active Directory domain and netbios details
   # Intended for test/demo purposes

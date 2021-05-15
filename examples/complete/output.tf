@@ -1,6 +1,7 @@
 output "windows_vm_password" {
   description = "Password for the windows VM"
   value       = module.virtual-machine.windows_vm_password
+  sensitive = true
 }
 
 output "windows_vm_public_ips" {

@@ -100,8 +100,8 @@ resource "azurerm_availability_set" "aset" {
   name                         = lower("avail-${var.virtual_machine_name}-${data.azurerm_resource_group.rg.location}")
   resource_group_name          = data.azurerm_resource_group.rg.name
   location                     = data.azurerm_resource_group.rg.location
-  platform_fault_domain_count  = 2
-  platform_update_domain_count = 2
+  platform_fault_domain_count  = var.platform_fault_domain_count
+  platform_update_domain_count = var.platform_update_domain_count
   managed                      = true
   tags                         = merge({ "ResourceName" = lower("avail-${var.virtual_machine_name}-${data.azurerm_resource_group.rg.location}") }, var.tags, )
 }
@@ -180,11 +180,12 @@ resource "azurerm_windows_virtual_machine" "win_vm" {
 # Promote Domain Controller
 #---------------------------------------
 resource "azurerm_virtual_machine_extension" "adforest" {
-  name                 = "ad-forest-creation"
-  virtual_machine_id   = azurerm_windows_virtual_machine.win_vm.0.id
-  publisher            = "Microsoft.Compute"
-  type                 = "CustomScriptExtension"
-  type_handler_version = "1.10"
+  name                       = "ad-forest-creation"
+  virtual_machine_id         = azurerm_windows_virtual_machine.win_vm.0.id
+  publisher                  = "Microsoft.Compute"
+  type                       = "CustomScriptExtension"
+  type_handler_version       = "1.10"
+  auto_upgrade_minor_version = true
 
   settings = <<SETTINGS
     {

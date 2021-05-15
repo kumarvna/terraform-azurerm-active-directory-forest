@@ -7,7 +7,7 @@ This terraform module is designed to deploy azure Windows 2012R2/2016/2019 virtu
 ```hcl
 module "virtual-machine" {
   source  = "kumarvna/active-directory-forest/azurerm"
-  version = "2.0.0"
+  version = "2.1.0"
 
   # Resource Group, location, VNet and Subnet details
   resource_group_name  = "rg-hub-demo-internal-shared-westeurope-001"

@@ -68,6 +68,16 @@ variable "enable_vm_availability_set" {
   default     = false
 }
 
+variable "platform_update_domain_count" {
+  description = "Specifies the number of update domains that are used"
+  default     = 5
+}
+
+variable "platform_fault_domain_count" {
+  description = "Specifies the number of fault domains that are used"
+  default     = 3
+}
+
 variable "enable_public_ip_address" {
   description = "Reference to a Public IP Address to associate with the NIC"
   default     = null
