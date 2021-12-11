@@ -118,6 +118,251 @@ variable "windows_distribution_list" {
       sku       = "2019-Datacenter"
       version   = "latest"
     },
+
+    ws2008r2sp1sd = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2008-R2-SP1-smalldisk"
+      version = "latest"
+    },
+
+    ws2012dcsd = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2012-Datacenter-smalldisk"
+      version = "latest"
+    },
+
+    ws2012dcsdg2 = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2012-datacenter-smalldisk-g2"
+      version = "latest"
+    },
+
+    ws2012r2dcsd = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2012-R2-Datacenter-smalldisk"
+      version = "latest"
+    },
+
+    ws2012r2dcsdg2 = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2012-r2-datacenter-smalldisk-g2"
+      version = "latest"
+    },
+
+    ws2016dcsvrcoresd = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2016-Datacenter-Server-Core-smalldisk"
+      version = "latest"
+    },
+
+    ws2016dcsvrcoresdg2 = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2016-datacenter-server-core-smalldisk-g2"
+      version = "latest"
+    },
+
+    ws2016dcsd = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2016-Datacenter-smalldisk"
+      version = "latest"
+    },
+
+    ws2016dcsdg2 = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2016-datacenter-smalldisk-g2"
+      version = "latest"
+    },
+
+    ws2019dccoresd = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2019-Datacenter-Core-smalldisk"
+      version = "latest"
+    },
+
+    ws2019dccoresdg2 = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2019-datacenter-core-smalldisk-g2"
+      version = "latest"
+    },
+
+    ws2019dccorecntsd = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2019-Datacenter-Core-with-Containers-smalldisk"
+      version = "latest"
+    },
+
+    ws2019dccorecntsdg2 = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2019-datacenter-core-with-containers-smalldisk-g2"
+      version = "latest"
+    },
+
+    ws2019dcsd = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2019-Datacenter-smalldisk"
+      version = "latest"
+    },
+
+    ws2019dcsdg2 = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2019-datacenter-smalldisk-g2"
+      version = "latest"
+    },
+
+    ws2019dccntsd = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2019-Datacenter-with-Containers-smalldisk"
+      version = "latest"
+    },
+
+    ws2019dccntsdg2 = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2019-datacenter-with-containers-smalldisk-g2"
+      version = "latest"
+    },
+
+    ws2022dcazedcoresd = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2022-datacenter-azure-edition-core-smalldisk"
+      version = "latest"
+    },
+
+    ws2022dcazedsd = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2022-datacenter-azure-edition-smalldisk"
+      version = "latest"
+    },
+
+    ws2022dccoresd = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2022-datacenter-core-smalldisk"
+      version = "latest"
+    },
+
+    ws2022dccoresdg2 = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2022-datacenter-core-smalldisk-g2"
+      version = "latest"
+    },
+
+    ws2022dcsd = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2022-datacenter-smalldisk"
+      version = "latest"
+    },
+
+    ws2022dcsdg2 = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "2022-datacenter-smalldisk-g2"
+      version = "latest"
+    },
+
+    wsdccore1803cntsdg2 = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "datacenter-core-1803-with-containers-smalldisk-g2"
+      version = "latest"
+    },
+
+    wsdccore1809cntsdg2 = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "datacenter-core-1809-with-containers-smalldisk-g2"
+      version = "latest"
+    },
+
+    wsdcCore1903cntsd = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "Datacenter-Core-1903-with-Containers-smalldisk"
+      version = "latest"
+    },
+
+    wsdccore1903cntsdg2 = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "datacenter-core-1903-with-containers-smalldisk-g2"
+      version = "latest"
+    },
+
+    wsdccore1909cntsd = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "datacenter-core-1909-with-containers-smalldisk"
+      version = "latest"
+    },
+
+    wsdccore1909cntsdg1 = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "datacenter-core-1909-with-containers-smalldisk-g1"
+      version = "latest"
+    },
+
+    wsdccore1909cntsdg2 = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "datacenter-core-1909-with-containers-smalldisk-g2"
+      version = "latest"
+    },
+
+    wsdccore2004cntsd = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "datacenter-core-2004-with-containers-smalldisk"
+      version = "latest"
+    },
+
+    wsdccore2004cntsdg2 = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "datacenter-core-2004-with-containers-smalldisk-g2"
+      version = "latest"
+    },
+
+    wsdccore20h2cntsd = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "datacenter-core-20h2-with-containers-smalldisk"
+      version = "latest"
+    },
+
+    wsdccore20h2cntsdg2 = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "datacenter-core-20h2-with-containers-smalldisk-g2"
+      version = "latest"
+    },
+
+    wsdccore20h2cntsdgs = {
+      publisher = "MicrosoftWindowsServer"
+      offer = "WindowsServer"
+      sku = "datacenter-core-20h2-with-containers-smalldisk-gs"
+      version = "latest"
+    },
   }
 }
 
